@@ -35,7 +35,7 @@ function App() {
                 </Stack>
                 <Heading as="h1" fontSize="5xl" fontWeight="bold" textAlign="left" maxW="600px">
                   Hello! I'm <chakra.span bgGradient="linear(to-br, #F5C400, #F5C400)" bgClip="text">
-                    weeb
+                    Tahfari
                   </chakra.span>!
                 </Heading>
                 <Text maxW="500px" fontSize="lg" textAlign="left" color="gray.500">
