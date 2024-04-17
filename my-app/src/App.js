@@ -11,12 +11,21 @@ import {
   Button,
   chakra,
   useColorModeValue,
-  Container, 
+  Container,
   Heading,
-  Stack, 
+  Stack,
   HStack,
   Avatar,
-  Icon
+  Icon,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverAnchor
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
@@ -34,12 +43,35 @@ function App() {
                 <Stack justifyContent="left" alignItems="left">
                 </Stack>
                 <Heading as="h1" fontSize="5xl" fontWeight="bold" textAlign="left" maxW="600px">
-                  Hello! I'm <chakra.span bgGradient="linear(to-br, #F5C400, #F5C400)" bgClip="text">
-                    Tahfari
-                  </chakra.span>!
+                  Hello! I'm&nbsp;
+                  <Popover placement='top-start'>
+                    <PopoverTrigger>
+                      <chakra.span
+                        bgGradient="linear(to-br, #F5C400, #F5C400)"
+                        bgClip="text"
+                        cursor="pointer"
+                        _hover={{ textDecoration: 'underline' }}
+                      >
+                        Tahfari
+                      </chakra.span>
+                    </PopoverTrigger>
+                    <PopoverContent>
+                      <PopoverArrow />
+                      <PopoverCloseButton />
+                      <PopoverBody fontSize="md">I'm also known as "weeb" on the website called  "<chakra.span
+                          bgGradient="linear(to-br, #F5C400, #F5C400)"
+                          bgClip="text"
+                          cursor="pointer"
+                          _hover={{ textDecoration: 'underline' }}
+                        >
+                            Guilded
+                        </chakra.span>"
+                      </PopoverBody>
+                    </PopoverContent>
+                  </Popover>
                 </Heading>
                 <Text maxW="500px" fontSize="lg" textAlign="left" color="gray.500">
-                  A full-stack developer tryna know more that meets the eye! 👀 I currently use the following frameworks: <Code children='React' />, <Code children='Next.js' />, and <Code children='Svelte' />. I'm also familiar with <Code children='HTML' />, <Code children='CSS' />, and <Code children='Javascript' />.
+                  A full-stack developer tryna know more than meets the eye! 👀 I currently use the following frameworks: <Code children='React' />, <Code children='Next.js' />, and <Code children='Svelte' />. I'm also familiar with <Code children='HTML' />, <Code children='CSS' />, and <Code children='Javascript' />.
                 </Text>
                 <HStack spacing={5}>
                   <Link href="https://github.com/weebjs" isExternal>
