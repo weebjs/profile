@@ -16,20 +16,11 @@ import {
   Stack,
   HStack,
   Avatar,
-  Icon,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverHeader,
-  PopoverBody,
-  PopoverFooter,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverAnchor
+  Icon
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaHandshake } from 'react-icons/fa';
 
 function App() {
   return (
@@ -44,39 +35,22 @@ function App() {
                 </Stack>
                 <Heading as="h1" fontSize="5xl" fontWeight="bold" textAlign="left" maxW="600px">
                   Hello! I'm&nbsp;
-                  <Popover placement='top-start'>
-                    <PopoverTrigger>
-                      <chakra.span
-                        bgGradient="linear(to-br, #F5C400, #F5C400)"
-                        bgClip="text"
-                        cursor="pointer"
-                        _hover={{ textDecoration: 'underline' }}
-                      >
-                        Tahfari
-                      </chakra.span>
-                    </PopoverTrigger>
-                    <PopoverContent>
-                      <PopoverArrow />
-                      <PopoverCloseButton />
-                      <PopoverBody fontSize="md">I'm also known as "weeb" on the website called  "<chakra.span
-                          bgGradient="linear(to-br, #F5C400, #F5C400)"
-                          bgClip="text"
-                          cursor="pointer"
-                          _hover={{ textDecoration: 'underline' }}
-                        >
-                            Guilded
-                        </chakra.span>"
-                      </PopoverBody>
-                    </PopoverContent>
-                  </Popover>
+                  <chakra.span
+                    bgGradient="linear(to-br, #F5C400, #F5C400)"
+                    bgClip="text"
+                    cursor="pointer"
+                    _hover={{ textDecoration: 'underline' }}
+                  >
+                    Tahfari
+                  </chakra.span>
                 </Heading>
                 <Text maxW="500px" fontSize="lg" textAlign="left" color="gray.500">
                   A full-stack developer tryna know more than meets the eye! 👀 I currently use the following frameworks: <Code children='React' />, <Code children='Next.js' />, and <Code children='Svelte' />. I'm also familiar with <Code children='HTML' />, <Code children='CSS' />, and <Code children='Javascript' />.
                 </Text>
                 <HStack spacing={5}>
-                  <Link href="https://github.com/weebjs" isExternal>
+                  <Link href="https://www.behance.net/weebthedev" isExternal>
                     <Button colorScheme="custom" bg="#F5C400" variant="solid" rounded="md" size="lg">
-                      Github <Icon as={FaGithub} ml={1} h={4} w={4} />
+                      Hire Me <Icon as={FaHandshake} ml={2} h={7} w={7} />
                     </Button>
                   </Link>
                 </HStack>
